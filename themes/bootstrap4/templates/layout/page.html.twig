@@ -1,0 +1,306 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.highlighted: Items for the highlighted content region.
+ * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.footer: Items for the footer region.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+<header class="fixed-top">
+  <!--Navbar-->
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/">
+      <img src="http://dev-seattleconventioncenter.pantheonsite.io/themes/bootstrap4/img/logos/logo.png" height="100%" alt="logo">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <svg aria-hidden="true" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse col-lg-8 ml-auto" id="basicExampleNav">
+
+      <div class="row justify-content-end">
+        <!-- Links -->
+        <ul type="block" class="col-lg-6 navbar-nav justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link nav-text-small color-grey-6" href="/directions">DIRECTIONS &amp; PARKING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text-small color-grey-6" href="/contact-us">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text-small color-grey-6" href="/about">ABOUT</a>
+          </li>
+          </ul>
+          <ul type="block" class="col-lg-4 offset-lg-1 navbar-nav justify-content-between">
+          <li class="nav-item">
+            <a type="button" class="nav-link nav-text-small color-grey-6" href="/form/tell-us-about-your-event">TELL US ABOUT YOUR EVENT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text-small" type="button" data-toggle="modal" data-target="#navsearchbar">
+              <svg id="search-icon" aria-hidden="true" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16 navbar-icon color-grey-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+        </ul>
+        <!-- Links -->
+        <hr class="d-none d-md-block col-md-12 m-0 p-0">
+        <!-- Links -->
+        <ul type="block" class="col-lg-6 navbar-nav justify-content-between">
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-text-audience-title color-green-wscc" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">PLANNERS</a>
+            <div class="dropdown-menu dropdown-primary nav-dropdown-menu-width" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/audience/planners">Planners</a>
+              <a class="dropdown-item" href="/audience/planners/onestop">OneStop Meeting</a>
+              <a class="dropdown-item" href="/audience/planners/services">Services</a>
+              <a class="dropdown-item" href="/audience/planners/green-initiative">Green Initiative</a>
+              <a class="dropdown-item" href="/audience/planners/event-staffing">Event Staffing</a>
+              <a class="dropdown-item" href="/audience/planners/event-planning-handbook">Event Planning Handbook</a>
+              <a class="dropdown-item" href="/audience/planners/floor-plans">FloorPlans & Capacity Chart</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-text-audience-title color-green-wscc" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">EXHIBITORS</a>
+            <div class="dropdown-menu dropdown-primary nav-dropdown-menu-width" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/audience/exhibitors">Exhibitors</a>
+              <a class="dropdown-item" href="/audience/exhibitors/exhibitor-services">Exhibitor Services</a>
+              <a class="dropdown-item" href="/audience/exhibitors/hand-carried-freight">Hand-Carried Freight</a>
+              <a class="dropdown-item" href="/audience/exhibitors/transportation-management">Transportation Management</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-text-audience-title color-green-wscc" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">VISITORS</a>
+            <div class="dropdown-menu dropdown-primary nav-dropdown-menu-width" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/audience/visitors">Visitors</a>
+              <a class="dropdown-item" href="/explore-wscc">Getting Around</a>
+              <a class="dropdown-item" href="/audience/visitors/retail">Shops, Food & Drink</a>
+              <a class="dropdown-item" href="/about/art">Public Art</a>
+              <a class="dropdown-item" href="/audience/visitors/visitor-services">Other Services</a>
+              <a class="dropdown-item" href="https://www.visitseattle.org/lodging/" target="_blank">Hotels</a>
+              <a class="dropdown-item" href="https://www.visitseattle.org/" target="_blank">Discover Seattle</a>
+            </div>
+          </li>
+        </ul>
+          <ul type="block" class="col-lg-4 offset-lg-1 navbar-nav justify-content-between">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-text-small color-grey-6" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">FACILITIES</a>
+            <div id="nav-venue-list" class="dropdown-menu dropdown-primary nav-dropdown-menu-width" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item venue-menu-list venue-list-item-facilities text-center mt-2 mb-2" href="/facilities">
+                <h6 class="font-weight-bold dark-grey-text px-2 py-4 venue-item">Facilities</h6>
+              </a>
+              <a class="dropdown-item venue-menu-list venue-list-item-wscc text-center mb-2" href="/facilities/washington-state-convention-center">
+                <h6 class="font-weight-bold dark-grey-text px-2 py-4 venue-item">Arch<br />
+<small>Existing Facility</small></h6>
+              </a>
+              <a class="dropdown-item venue-menu-list venue-list-item-tcc text-center mb-2" href="/facilities/conference-center">
+                <h6 class="font-weight-bold dark-grey-text px-2 py-4 venue-item">Arch<br />
+<small>Conference Center</small></h6>
+              </a>
+              <a class="dropdown-item venue-menu-list venue-list-item-addition text-center mb-2" href="/facilities/summit">
+                <h6 class="font-weight-bold dark-grey-text px-2 py-4 venue-item">Summit<br />
+<small>Opening 2022</small></h6>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text-small color-grey-6" href="/upcoming-events">UPCOMING EVENTS</a>
+          </li>
+        </ul>
+        <!-- Links -->
+      </div>
+    </div>
+    <!-- Collapsible content -->
+</div>
+</nav>
+<!--/.Navbar-->
+
+</header>
+
+<main role="main">
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+  {% set sidebar_first_classes = page.sidebar_first ? ( page.sidebar_second ? 'col-sm-4' : 'col-sm-4' ) : ( page.sidebar_second ? 'col-sm-4' ) %}
+  {% set sidebar_second_classes = page.sidebar_first ? ( page.sidebar_second ? 'col-sm-4' : 'col-sm-4' ) : ( page.sidebar_second ? 'col-sm-4' ) %}
+  {% set content_classes = page.sidebar_first ? ( page.sidebar_second ? 'col-sm-8' : 'col-sm-12' ) : ( page.sidebar_second ? 'col-sm-8' : 'col-sm-12' ) %}
+
+  {% if page.hero_content %}
+    {{ page.hero_content }}
+  {% endif %}
+
+  <div class="container">
+      {% if page.breadcrumb %}
+        {{ page.breadcrumb }}
+      {% endif %}
+    <div class="row">
+      <div class="{{ content_classes }} order-last order-md-first">
+        {{ page.content }}
+      </div>
+      {% if page.sidebar_second %}
+        <div class="{{ sidebar_second_classes }} order-first order-md-last">
+          {{ page.sidebar_second }}
+          {% if page.sidebar_resources %}
+            {{ page.sidebar_resources }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade right" id="tellusaboutyourevent" tabindex="-1" role="dialog" aria-labelledby="tellusaboutyoureventLabel" aria-hidden="true">
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade top" id="navsearchbar" tabindex="-1" role="dialog" aria-labelledby="navsearchbarLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fluid modal-full-height modal-top" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        {% if page.modals %}
+          {{ page.modals }}
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="text-muted py-md-5">
+    <div class="pt-4 pt-md-5 border-top container">
+          <!--First row-->
+          <div class="row">
+            <div class="d-none d-md-block md-8 order-md-2 text-right ml-auto">
+              <div class="footer-nav mb-1">
+                <a class="footer-link text-weight-normal color-green-9" href="/facilities/summit">WSCC Additional Facility</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/contact-us">Contact Us</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/about/careers">Careers</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/about/governance">PFD Governance</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/site-map">Site Map</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/about/privacy-policy">Privacy Policy</a>
+              </div>
+              <div class="footer-text mb-1">
+                705 Pike Street Seattle, WA 98101-2310
+              </div>
+              <div class="footer-text mb-1">
+                Phone: 206-694-5000
+              </div>
+            </div>
+            <div class="d-none d-md-block col-md-4 order-md-1 text-left">
+              <div class="mt-3">
+                <a class="footer-link mr-2" href="https://www.facebook.com/WashingtonStateConventionCenter" target="_blank"><i class="fa fa-facebook-square color-green-9 footer-icon"></i></a>
+                <a class="footer-link" href="https://twitter.com/waconvention" target="_blank"><i class="fa fa-twitter-square color-green-9 footer-icon"></i></a>
+              </div>
+              <div class="footer-text">
+                © Washington State Convention Center
+              </div>
+            </div>
+
+            <div class="d-md-none col-sm-12 order-sm-1 text-center">
+              <div class="footer-nav mb-1">
+                <a class="footer-link text-weight-normal color-green-9" href="/facilities/summit">WSCC Additional Facility</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/about/press">Press</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/contact-us">Contact Us</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/about/careers">Careers</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/site-map">Site Map</a>
+                <a class="footer-link">|</a>
+                <a class="footer-link text-weight-normal color-green-9" href="/about/privacy-policy">Privacy Policy</a>
+              </div>
+              <div class="footer-text mb-1">
+                705 Pike Street Seattle, WA 98101-2310
+              </div>
+              <div class="footer-text mb-1">
+                Phone: 206-694-5000
+              </div>
+            </div>
+            <div class="d-md-none col-sm-12 order-sm-2 text-center">
+              <div class="mt-md-3 my-sm-2">
+                <a class="footer-link mr-2" href="https://www.facebook.com/WashingtonStateConventionCenter" target="_blank"><i class="fa fa-facebook-square color-green-9 footer-icon-m"></i></a>
+                <a class="footer-link" href="https://twitter.com/waconvention" target="_blank"><i class="fa fa-twitter-square color-green-9 footer-icon-m"></i></a>
+              </div>
+              <div class="footer-text">
+                © Washington State Convention Center
+              </div>
+              <div class="d-sm-block d-md-none pb-3"></div>
+            </div>
+
+          </div>
+          <!--/First row-->
+
+
+
+    </div>
+  </footer>

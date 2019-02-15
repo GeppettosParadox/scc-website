@@ -1,0 +1,14 @@
+hello-world-styling:
+  css:
+    theme:
+      //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      css/bootstrap.min.css: {}
+      css/mdb.css: {}
+      css/style.css: {}
+hello-world-script:
+  js:
+    js/bootstrap.min.js: {}
+    js/mdb.min.js: {}
+    js/popper.min.js: {}
+  dependencies:
+    - core/jquery

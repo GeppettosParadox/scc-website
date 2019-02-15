@@ -1,0 +1,15 @@
+Colors:
+
+Text grey----------///
+#e0e0e0 (light grey)
+#666 (mid grey)
+#424242 (dark grey)
+
+
+Title Tags----------///
+<h3 class="h1-responsive font-weight-bold my-5"></h3>
+<h6 class="font-weight-bold dark-grey-text mb-3"></h6>
+
+Class shortcuts----------///
+font-weight-bold
+list-unstyled

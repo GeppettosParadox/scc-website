@@ -1,0 +1,21 @@
+{
+    "name": "drupal/hello_world",
+    "description": "hello world is the first attempt at building a module",
+    "type": "drupal-module",
+    "homepage": "https://wscc.com/project/hello_world",
+    "authors": [
+        {
+            "name": "Sway Harner (SWY)",
+            "homepage": "https://www.geppettosparadox.github.io",
+            "role": "Internet Wizard"
+        }
+    ],
+    "support": {
+        "issues": " ",
+        "irc": " ",
+        "source": " "
+    },
+    "license": " ",
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test handle response</title>
+</head>
+<body>
+	<?php
+		$errEmail = $errPass = $errName = "";
+		if(isset($_POST["submit"])) {
+
+			$email = $_POST['email']
+			$name = $_POST['user']
+			$password = $_POST['password']
+			$valid = true;
+			// Check if nae has been entered
+			if(empty($_POST['user'])) {
+				errName = 'Please enter your user name'
+				$valid = false;
+			}
+			if(empty($_POST['email'])) {
+				errName = 'Please enter your email'
+				$valid = false;
+			}
+			if(empty($_POST['password']) || (preg_match("/^.*(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$/", $_POST["password"]) === 0)) {
+				errPass = '<p class="errText">Password must be at least 8 character and must contain at least one lower case letter, one upper case letter and one digit</p>';
+				$valid = false;
+			}
+			if($valid){
+				echo "The form has been submitted";
+			}
+		}
+		?>
+
+
+</body>
+</html>
